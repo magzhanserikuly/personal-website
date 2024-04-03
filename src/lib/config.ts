@@ -9,19 +9,19 @@ const config = {
   authorUrl: 'https://ivluence.vercel.app',
   nav: [
     {
-      name: 'Home',
+      name: 'Главная',
       path: '/',
     },
     {
-      name: 'CV',
+      name: 'Резюме',
       path: '/cv/',
     },
     {
-      name: 'Projects',
+      name: 'Проекты',
       path: '/projects/',
     },
     {
-      name: 'contacts',
+      name: 'Контакты',
       path: '/contacts/',
     },
   ],

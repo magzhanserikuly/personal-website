@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
+
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import config from '@/lib/config';
@@ -24,9 +25,16 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head />
-      <body className={clsx(ibm_plex_mono.className, 'max-w-2xl m-auto')}>
-        <Header />
-        <main>{children}</main>
+      <body
+        className={clsx(
+          ibm_plex_mono.className,
+          'max-w-2xl m-auto text-white flex flex-col justify-between h-screen'
+        )}
+      >
+        <div>
+          <Header />
+          <main>{children}</main>
+        </div>
         <Footer />
       </body>
     </html>
