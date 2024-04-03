@@ -43,7 +43,7 @@ export default async function Contacts() {
         muted
         loop
       >
-        <source src='steam.mp4' type='video/mp4' />
+        <source src='steam.mov' type='video/mp4' />
       </video>
       <div>
         <h1 className='text-5xl font-bold mb-2 pb-3'>CONTACTS</h1>

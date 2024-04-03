@@ -9,7 +9,7 @@ export default async function Projects() {
         muted
         loop
       >
-        <source src='steam.mp4' type='video/mp4' />
+        <source src='steam.mov' type='video/mp4' />
       </video>
       <div className='flex flex-col'>
         <h1 className='text-5xl font-bold mb-2'>PROJECTS</h1>

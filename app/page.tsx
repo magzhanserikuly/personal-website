@@ -9,7 +9,7 @@ export default async function Home() {
         muted
         loop
       >
-        <source src='steam.mp4' type='video/mp4' />
+        <source src='steam.mov' type='video/mp4' />
       </video>
       <div className='flex mb-10 gap-2'>
         <div className='flex flex-col'>
