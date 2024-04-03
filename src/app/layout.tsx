@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 
-import Header from '@/components/shared/Header';
-import Footer from '@/components/shared/Footer';
+import Header from '@/components/shared/header';
+import Footer from '@/components/shared/footer';
 import config from '@/lib/config';
 import clsx from 'clsx';
 
@@ -28,10 +28,10 @@ export default function RootLayout({
       <body
         className={clsx(
           ibm_plex_mono.className,
-          'max-w-2xl m-auto text-white flex flex-col justify-between h-screen'
+          'max-w-2xl m-auto text-white flex flex-col justify-between flex-grow h-screen'
         )}
       >
-        <div>
+        <div className='flex-1'>
           <Header />
           <main>{children}</main>
         </div>

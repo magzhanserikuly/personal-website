@@ -12,6 +12,9 @@ const config: Config = {
         primary: '#121212',
         secondary: '#B787F5',
       },
+      boxShadow: {
+        inset: 'inset 0 0 8px 8px rgba(0, 0, 0, 0.5)',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

@@ -38,8 +38,16 @@ const buttonObject = [
 export default async function Contacts() {
   return (
     <div className='px-3 flex flex-col gap-4'>
+      <video
+        className='absolute -z-10 inset-0 object-cover opacity-30 w-full h-full'
+        autoPlay
+        muted
+        loop
+      >
+        <source src='steam.mp4' type='video/mp4' />
+      </video>
       <div>
-        <h1 className='text-5xl font-bold mb-2 pb-3'>Контакты</h1>
+        <h1 className='text-5xl font-bold mb-2 pb-3'>CONTACTS</h1>
       </div>
       {buttonObject.map((item, key) => {
         return (
