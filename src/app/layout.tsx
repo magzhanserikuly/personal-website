@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 
-import Header from '@/components/shared/header';
-import Footer from '@/components/shared/footer';
-import config from '@/lib/config';
+import Header from '../components/shared/Header';
+import Footer from '../components/shared/Footer';
+import config from '../lib/config';
 import clsx from 'clsx';
 
 const ibm_plex_mono = IBM_Plex_Mono({
