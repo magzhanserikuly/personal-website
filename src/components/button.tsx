@@ -1,4 +1,3 @@
-import config from '@/lib/config';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import Link from 'next/link';
 /**
