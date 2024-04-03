@@ -25,6 +25,11 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  /* background-image: url('../public/steam.gif');
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
 }
 
 @layer utilities {

@@ -3,14 +3,15 @@ import Image from 'next/image';
 export default async function Home() {
   return (
     <div className='px-3'>
-      <video
+      {/* <video
         className='absolute -z-10 inset-0 object-cover opacity-30  h-full w-full'
         autoPlay
         muted
         loop
+        controls={false}
       >
         <source src='steam.mov' type='video/mp4' />
-      </video>
+      </video> */}
       <div className='flex mb-10 gap-2'>
         <div className='flex flex-col'>
           <h1 className='text-5xl font-bold mb-2'>ADLET IBRAIMOV</h1>
