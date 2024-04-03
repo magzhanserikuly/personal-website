@@ -1,6 +1,6 @@
 'use client';
 
-import config from '@/lib/config';
+import config from '../../lib/config';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 /**

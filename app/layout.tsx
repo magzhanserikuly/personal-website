@@ -3,9 +3,9 @@ import { IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 
 import clsx from 'clsx';
-import config from '@/lib/config';
-import Header from '@/components/shared/Header';
-import Footer from '@/components/shared/Footer';
+import config from '../lib/config';
+import Header from '../components/shared/Header';
+import Footer from '../components/shared/Footer';
 
 const ibm_plex_mono = IBM_Plex_Mono({
   weight: ['400', '700'],
