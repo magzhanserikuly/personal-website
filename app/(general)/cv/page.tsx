@@ -75,7 +75,7 @@ export default async function CV() {
         <h4 className='border-l-4 border-secondary px-2 font-bold min-w-40'>
           Front End Developer - LA COLONIA
         </h4>
-        <p>MILAN, ITALY 🇰🇿</p>
+        <p>MILAN, ITALY 🇮🇹</p>
         <p>Jan 2021 - Aug 2021</p>
         <br />
         <p>
