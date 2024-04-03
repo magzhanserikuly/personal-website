@@ -76,7 +76,7 @@ export default async function CV() {
           Front End Developer - LA COLONIA
         </h4>
         <p>MILAN, ITALY 🇮🇹</p>
-        <p>Jan 2021 - Aug 2021</p>
+        <p>Sep 2022 - Jan 2024</p>
         <br />
         <p>
           {`Expert in digital solutions for retail and cultural domains. Skilled
@@ -92,7 +92,7 @@ export default async function CV() {
           React Native Dev - AQ-NIET GROUP
         </h4>
         <p>ALMATY, KAZAKHSTAN 🇰🇿</p>
-        <p>Sep 2022 - Jan 2024</p>
+        <p>Jan 2021 - Aug 2021</p>
         <br />
         <p>
           {`Created and deployed a Pizza Delivery app for a prominent Shymkent( city in Kazakhstan) restaurant, leveraging React Native and Redux for cross-platform functionality. The project seamlessly integrated technologies like Redux, Expo, MaterialUI, Google Cloud Platform, WebView, and Axios. Additionally, played a key role in developing "Europharma," the main e-commerce app for AQ-Niet Group.`}
