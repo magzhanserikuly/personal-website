@@ -33,7 +33,7 @@ export default async function Home() {
           />
         </div>
       </div>
-      <div className=''>
+      <div className='text-justify'>
         {`Expert in digital solutions for retail and cultural domains. Skilled in
         visual identities, commercial campaigns, and dynamic website development
         using React, NextJS, Typescript, Sanity, and Shopify's Liquid. Collaborated

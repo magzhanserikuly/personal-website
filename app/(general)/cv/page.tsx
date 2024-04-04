@@ -78,7 +78,7 @@ export default async function CV() {
         <p>MILAN, ITALY 🇮🇹</p>
         <p>Sep 2022 - Jan 2024</p>
         <br />
-        <p>
+        <p className='text-justify'>
           {`Expert in digital solutions for retail and cultural domains. Skilled
           in visual identities, commercial campaigns, and dynamic website
           development using React, NextJS, Typescript, Sanity, and Shopify's
@@ -94,7 +94,7 @@ export default async function CV() {
         <p>ALMATY, KAZAKHSTAN 🇰🇿</p>
         <p>Jan 2021 - Aug 2021</p>
         <br />
-        <p>
+        <p className='text-justify'>
           {`Created and deployed a Pizza Delivery app for a prominent Shymkent( city in Kazakhstan) restaurant, leveraging React Native and Redux for cross-platform functionality. The project seamlessly integrated technologies like Redux, Expo, MaterialUI, Google Cloud Platform, WebView, and Axios. Additionally, played a key role in developing "Europharma," the main e-commerce app for AQ-Niet Group.`}
         </p>
         <br />
@@ -104,7 +104,7 @@ export default async function CV() {
         <p>ALMATY, KAZAKHSTAN 🇰🇿</p>
         <p>Sep 2020 - Jan 2021</p>
         <br />
-        <p>
+        <p className='text-justify'>
           {`Participated as an intern in the dynamic development of the ambitious "VLife" super-app. Gained hands-on experience with React Functional components, MaterialUI, and Redux, acquiring valuable skills for creating sophisticated UI elements. Delved into REST APIs using tools like Postman, while honing my understanding of SOLID principles and innovative UI concepts.`}
         </p>
         <br />
