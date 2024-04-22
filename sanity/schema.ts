@@ -6,7 +6,9 @@ import post from './schemaTypes/post';
 import author from './schemaTypes/author';
 import about from './schemaTypes/about';
 import cv from './schemaTypes/cv';
+import contacts from './schemaTypes/contacts';
+import projects from './schemaTypes/projects';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [post, about, cv, author, category, blockContent],
+  types: [post, about, projects, contacts, cv, author, category, blockContent],
 };

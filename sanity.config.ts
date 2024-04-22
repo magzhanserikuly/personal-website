@@ -55,6 +55,24 @@ export default defineConfig({
               .icon(DocumentIcon)
               .id('cv')
               .child(S.editor().title('CV').schemaType('cv').documentId('cv')),
+            S.listItem()
+              .title('PROJECTS')
+              .icon(DocumentIcon)
+              .child(
+                S.documentTypeList('projects')
+                  .title('PROJECTS')
+                  .schemaType('projects')
+              ),
+            S.listItem()
+              .title('CONTACTS')
+              .icon(CaseIcon)
+              .id('contacts')
+              .child(
+                S.editor()
+                  .title('CONTACTS')
+                  .schemaType('contacts')
+                  .documentId('contacts')
+              ),
           ]);
       },
     }),
