@@ -26,22 +26,14 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'bio',
-      title: 'Bio',
-      type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
-          lists: [],
-        },
-      ],
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'blockContent',
     }),
-    {
+    defineField({
       name: 'description',
       title: 'Description',
       type: 'blockContent',
-    },
+    }),
   ],
 });

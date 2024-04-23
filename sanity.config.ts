@@ -5,27 +5,17 @@
 import { visionTool } from '@sanity/vision';
 import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
+import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list';
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from './sanity/env';
 import { schema } from './sanity/schema';
 import {
-  HomeIcon,
+  UserIcon,
   CaseIcon,
-  DocumentIcon,
-  PresentationIcon,
-  BulbOutlineIcon,
-  TiersIcon,
-  StarIcon,
-  EarthGlobeIcon,
-  EarthAmericasIcon,
-  CalendarIcon,
-  MenuIcon,
+  LaunchIcon,
+  RocketIcon,
   BillIcon,
-  EyeOpenIcon,
-  EnvelopeIcon,
-  FolderIcon,
-  FilterIcon,
 } from '@sanity/icons';
 
 export default defineConfig({
@@ -36,13 +26,13 @@ export default defineConfig({
   schema,
   plugins: [
     structureTool({
-      structure: (S) => {
+      structure: (S, context) => {
         return S.list()
           .title('PERSONAL WEBSITE ADMIN PANEL')
           .items([
             S.listItem()
               .title('ABOUT ME')
-              .icon(HomeIcon)
+              .icon(UserIcon)
               .id('about')
               .child(
                 S.editor()
@@ -50,22 +40,28 @@ export default defineConfig({
                   .schemaType('about')
                   .documentId('about')
               ),
-            S.listItem()
-              .title('CV')
-              .icon(DocumentIcon)
-              .id('cv')
-              .child(S.editor().title('CV').schemaType('cv').documentId('cv')),
-            S.listItem()
-              .title('PROJECTS')
-              .icon(DocumentIcon)
-              .child(
-                S.documentTypeList('projects')
-                  .title('PROJECTS')
-                  .schemaType('projects')
-              ),
+            // S.listItem()
+            //   .title('CV')
+            //   .icon(BillIcon)
+            //   .child(S.documentTypeList('cv').title('CV').schemaType('cv')),
+            orderableDocumentListDeskItem({
+              type: 'cv',
+              S,
+              context,
+              title: 'CV',
+              icon: BillIcon,
+            }),
+            orderableDocumentListDeskItem({
+              type: 'projects',
+              S,
+              context,
+              title: 'PROJECTS',
+              icon: RocketIcon,
+            }),
             S.listItem()
               .title('CONTACTS')
               .icon(CaseIcon)
+              .icon(LaunchIcon)
               .id('contacts')
               .child(
                 S.editor()
