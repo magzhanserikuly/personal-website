@@ -1,20 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { client } from '@/sanity/lib/client';
+
+const aboutQuery = `
+*[_type == "about"]{
+  name,
+  image{
+    ...,
+    asset->{
+      ...
+    }
+  },
+  subtitle[]{
+    ...
+  },
+  description[]{
+      ...
+  }
+} `;
+
 export default async function Home() {
+  const data = await client.fetch(aboutQuery, {}, { cache: 'no-store' });
+  console.log(data);
   return (
     <div className='px-3'>
-      {/* <video
+      <video
         className='absolute -z-10 inset-0 object-cover opacity-30  h-full w-full'
         autoPlay
         muted
         loop
         controls={false}
       >
-        <source src='steam.mov' type='video/mp4' />
-      </video> */}
+        <source src='steam15.mov' type='video/mp4' />
+      </video>
       <div className='flex mb-10 gap-2'>
         <div className='flex flex-col'>
-          <h1 className='text-5xl font-bold mb-2'>ADLET IBRAIMOV</h1>
+          <h1 className='text-5xl font-bold mb-2'>{data[0]?.name}</h1>
           <h2 className='text-lg'>
             Frontend Developer
             <br />

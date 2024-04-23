@@ -8,7 +8,18 @@ import about from './schemaTypes/about';
 import cv from './schemaTypes/cv';
 import contacts from './schemaTypes/contacts';
 import projects from './schemaTypes/projects';
+import contact from './schemaTypes/contact';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [post, about, projects, contacts, cv, author, category, blockContent],
+  types: [
+    post,
+    about,
+    projects,
+    contact,
+    contacts,
+    cv,
+    author,
+    category,
+    blockContent,
+  ],
 };

@@ -6,42 +6,15 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'name',
-      title: 'Name',
-      type: 'string',
-    }),
-    defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative Text',
-        },
-      ],
-    }),
-    defineField({
-      name: 'bio',
-      title: 'Bio',
+      name: 'contact',
+      title: 'Contact',
       type: 'array',
       of: [
         {
-          title: 'Block',
-          type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
-          lists: [],
+          title: 'Contact',
+          type: 'contact',
         },
       ],
     }),
-    {
-      name: 'description',
-      title: 'Description',
-      type: 'blockContent',
-    },
   ],
 });
