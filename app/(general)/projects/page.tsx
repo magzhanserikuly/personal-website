@@ -25,7 +25,7 @@ export default async function Projects() {
           <div className='max-w-80 w-full h-full aspect-video relative'>
             <Image
               className='object-cover'
-              loading='eager'
+              loading='lazy'
               src='/offwhite.png'
               alt='Picture of the author'
               fill={true}
@@ -41,7 +41,7 @@ export default async function Projects() {
           <div className='max-w-80 w-full h-full aspect-video relative'>
             <Image
               className='object-cover'
-              loading='eager'
+              loading='lazy'
               src='/modes.png'
               alt='Picture of the author'
               fill={true}
@@ -57,7 +57,7 @@ export default async function Projects() {
           <div className='max-w-80 w-full h-full aspect-video relative'>
             <Image
               className='object-cover'
-              loading='eager'
+              loading='lazy'
               src='/karlaotto.png'
               alt='Picture of the author'
               fill={true}
@@ -73,7 +73,7 @@ export default async function Projects() {
           <div className='max-w-80 w-full h-full aspect-video relative'>
             <Image
               className='object-cover'
-              loading='eager'
+              loading='lazy'
               src='/jlal.png'
               alt='Picture of the author'
               fill={true}
@@ -89,7 +89,7 @@ export default async function Projects() {
           <div className='max-w-80 w-full h-full aspect-video relative'>
             <Image
               className='object-cover'
-              loading='eager'
+              loading='lazy'
               src='/lerub.png'
               alt='Picture of the author'
               fill={true}
@@ -105,7 +105,7 @@ export default async function Projects() {
           <div className='max-w-80 w-full h-full aspect-video relative'>
             <Image
               className='object-cover'
-              loading='eager'
+              loading='lazy'
               src='/prestatech.png'
               alt='Picture of the author'
               fill={true}
@@ -121,7 +121,7 @@ export default async function Projects() {
           <div className='max-w-80 w-full h-full aspect-video relative'>
             <Image
               className='object-cover'
-              loading='eager'
+              loading='lazy'
               src='/came.png'
               alt='Picture of the author'
               fill={true}
@@ -137,7 +137,7 @@ export default async function Projects() {
           <div className='max-w-80 w-full h-full aspect-video relative'>
             <Image
               className='object-cover'
-              loading='eager'
+              loading='lazy'
               src='/gamera.png'
               alt='Picture of the author'
               fill={true}
