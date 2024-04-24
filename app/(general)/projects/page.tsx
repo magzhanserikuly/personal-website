@@ -153,7 +153,8 @@ export default async function Projects() {
           <div className='max-w-80 w-full h-full aspect-video relative'>
             <Image
               className='object-cover'
-              loading='eager'
+              loading='lazy'
+              placeholder='blur'
               src='/spotti.png'
               alt='Picture of the author'
               fill={true}

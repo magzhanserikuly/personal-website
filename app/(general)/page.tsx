@@ -47,10 +47,10 @@ export default async function Home() {
         <div className='max-w-32 w-full h-full aspect-square relative '>
           <Image
             className='object-cover'
-            loading='eager'
             src='/avatar_2.jpeg'
             alt='Picture of the author'
             fill={true}
+            placeholder='blur'
           />
         </div>
       </div>
