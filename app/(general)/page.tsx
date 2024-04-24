@@ -31,7 +31,7 @@ export default async function Home() {
         loop
         controls={false}
       >
-        <source src='steam15.mov' type='video/mp4' />
+        <source src='steam15.mp4' type='video/mp4' />
       </video>
       <div className='flex mb-10 gap-2'>
         <div className='flex flex-col'>
