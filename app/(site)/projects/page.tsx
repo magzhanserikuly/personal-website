@@ -154,7 +154,6 @@ export default async function Projects() {
             <Image
               className='object-cover'
               loading='lazy'
-              placeholder='blur'
               src='/spotti.png'
               alt='Picture of the author'
               fill={true}

@@ -1,16 +1,10 @@
 import { defineType, defineField } from 'sanity';
-import {
-  orderRankField,
-  orderRankOrdering,
-} from '@sanity/orderable-document-list';
 
 export default defineType({
-  name: 'projects',
-  title: 'PROJECTS',
+  name: 'about',
+  title: 'About me',
   type: 'document',
-  orderings: [orderRankOrdering],
   fields: [
-    orderRankField({ type: 'projects' }),
     defineField({
       name: 'name',
       title: 'Name',
@@ -32,22 +26,16 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'bio',
-      title: 'Bio',
+      name: 'subtitle',
+      title: 'Subtitle',
       type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
-          lists: [],
-        },
-      ],
+      of: [{ type: 'block' }],
     }),
-    {
+    defineField({
       name: 'description',
       title: 'Description',
-      type: 'blockContent',
-    },
+      type: 'array',
+      of: [{ type: 'block' }],
+    }),
   ],
 });
