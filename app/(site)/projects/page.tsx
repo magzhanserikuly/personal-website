@@ -5,7 +5,6 @@ import { getProjects } from '@/sanity/sanity-utils';
 
 export default async function Projects() {
   const data = await getProjects();
-  console.log(data);
 
   if (!data)
     return <div>Sorry, for unknown reason projects could not be loaded.</div>;

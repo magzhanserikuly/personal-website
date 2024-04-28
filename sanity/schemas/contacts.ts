@@ -6,8 +6,8 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'contact',
-      title: 'Contact',
+      name: 'contacts',
+      title: 'Contacts',
       type: 'array',
       of: [
         {

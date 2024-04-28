@@ -5,57 +5,44 @@ import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Button from '../../../components/Button';
+import ChatIcon from '@mui/icons-material/Chat';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import { getContacts } from '@/sanity/sanity-utils';
 
-const buttonObject = [
-  {
-    icon: TelegramIcon,
-    text: 'Telegram',
-    value: 'https://t.me/ibrvimv',
-  },
-  {
-    icon: InstagramIcon,
-    text: '@ivluence',
-    value: 'https://www.instagram.com/ivluence',
-  },
-  {
-    icon: EmailIcon,
-    text: 'ivluence@gmail.com',
-    value: 'mailto:ivluence@gmail.com',
-  },
-  {
-    icon: LinkedInIcon,
-    text: 'LinkedIn',
-    value: 'https://www.linkedin.com/in/ibrvimv/',
-  },
-  {
-    icon: GitHubIcon,
-    text: 'GitHub',
-    value: 'https://github.com/ibrvimv',
-  },
-];
+type IconMapper = {
+  [key: string]: React.ElementType;
+};
+const iconMapper: IconMapper = {
+  telegram: TelegramIcon,
+  instagram: InstagramIcon,
+  email: EmailIcon,
+  linkedin: LinkedInIcon,
+  github: GitHubIcon,
+  custom: ChatIcon,
+  phone: LocalPhoneIcon,
+};
 
 export default async function Contacts() {
+  const data = await getContacts();
+  console.log(data);
+  if (!data) return <div>No contacts founded</div>;
+
   return (
     <div className='px-3 flex flex-col gap-4'>
-      {/* <video
-        className='absolute -z-10 inset-0 object-cover opacity-30 w-full h-full'
-        autoPlay
-        muted
-        loop
-        controls={false}
-      >
-        <source src='steam.mov' type='video/mp4' />
-      </video> */}
       <div>
         <h1 className='text-5xl font-bold mb-2 pb-3'>CONTACTS</h1>
       </div>
-      {buttonObject.map((item, key) => {
+      {data?.contacts.map((item, key) => {
+        const IconComponent = item?.socialMedia
+          ? iconMapper[item?.socialMedia]
+          : iconMapper['custom'];
+
         return (
           <Button
             key={key}
-            icon={item.icon}
-            text={item.text}
-            value={item.value}
+            icon={IconComponent} // Render the icon component directly
+            text={item.name} // Assuming 'name' corresponds to the text to be displayed
+            value={item.link} // Assuming 'link' corresponds to the value of the button
           />
         );
       })}

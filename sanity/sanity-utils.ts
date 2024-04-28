@@ -3,6 +3,7 @@ import { About } from '@/types/about';
 import { client } from './lib/client';
 import { CV } from '@/types/cv';
 import { Project } from '@/types/project';
+import { Contact, Contacts } from '@/types/contact';
 
 export async function getAbout(): Promise<About> {
   return client.fetch(
@@ -23,14 +24,15 @@ export async function getAbout(): Promise<About> {
 }
 export async function getCV(): Promise<CV[]> {
   return client.fetch(
-    groq`*[_type=='cv']{
+    groq`*[_type=='cv']|order(orderRank){
       ...
     } `
   );
 }
+
 export async function getProjects(): Promise<Project[]> {
   return client.fetch(
-    groq`*[_type=='projects']{
+    groq`*[_type=='projects']|order(orderRank){
       name,
       image{
         asset->{
@@ -41,6 +43,14 @@ export async function getProjects(): Promise<Project[]> {
         }
       },
       url
+    } `
+  );
+}
+
+export async function getContacts(): Promise<Contacts> {
+  return client.fetch(
+    groq`*[_type=='contacts'][0]{
+      contacts
     } `
   );
 }
