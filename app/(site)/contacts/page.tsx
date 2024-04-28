@@ -24,7 +24,7 @@ const iconMapper: IconMapper = {
 
 export default async function Contacts() {
   const data = await getContacts();
-  console.log(data);
+
   if (!data) return <div>No contacts founded</div>;
 
   return (
