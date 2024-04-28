@@ -45,5 +45,8 @@ h2 {
   @apply text-2xl;
 }
 h3 {
-  @apply text-xl;
+  @apply text-lg mb-2 text-secondary uppercase;
+}
+h4 {
+  @apply border-l-4 border-secondary px-2 font-bold uppercase;
 }

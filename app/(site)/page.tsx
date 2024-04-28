@@ -31,7 +31,7 @@ export default async function Home() {
           <Image
             className='object-cover '
             src={data.image?.asset?.url}
-            alt='Picture of the author'
+            alt={data.image?.alt}
             fill={true}
             placeholder='blur'
             blurDataURL={data.image?.asset?.metadata?.lqip}

@@ -8,9 +8,7 @@ export default defineType({
   name: 'cv',
   title: 'CV',
   type: 'document',
-  orderings: [orderRankOrdering],
   fields: [
-    orderRankField({ type: 'cv' }),
     defineField({
       name: 'name',
       title: 'Name',
@@ -22,5 +20,7 @@ export default defineType({
       type: 'array',
       of: [{ type: 'block' }],
     }),
+    orderRankField({ type: 'cv' }),
   ],
+  orderings: [orderRankOrdering as any],
 });

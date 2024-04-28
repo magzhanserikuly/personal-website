@@ -8,9 +8,8 @@ export default defineType({
   name: 'projects',
   title: 'PROJECTS',
   type: 'document',
-  orderings: [orderRankOrdering],
+
   fields: [
-    orderRankField({ type: 'projects' }),
     defineField({
       name: 'name',
       title: 'Name',
@@ -32,23 +31,11 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'bio',
-      title: 'Bio',
-      type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
-          lists: [],
-        },
-      ],
+      name: 'url',
+      title: 'URL',
+      type: 'url',
     }),
-    defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'array',
-      of: [{ type: 'block' }],
-    }),
+    orderRankField({ type: 'projects' }),
   ],
+  orderings: [orderRankOrdering as any],
 });

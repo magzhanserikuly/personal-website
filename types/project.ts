@@ -1,11 +1,9 @@
-import { PortableTextBlock } from "sanity";
+import { Image } from './image';
 
 export type Project = {
   _id: string;
   createdAt: Date;
   name: string;
-  slug: string;
-  image: string;
+  image: Image;
   url: string;
-  content: PortableTextBlock[];
-}
+};

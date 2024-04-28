@@ -1,4 +1,5 @@
 import { PortableTextBlock } from 'sanity';
+import { Image } from './image';
 
 export type About = {
   _id: string;
@@ -7,14 +8,4 @@ export type About = {
   image: Image;
   subtitle: PortableTextBlock[];
   description: PortableTextBlock[];
-};
-
-export type Image = {
-  alt: string;
-  asset: {
-    url: string;
-    metadata: {
-      lqip: string;
-    };
-  };
 };

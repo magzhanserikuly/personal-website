@@ -1,7 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getProjects } from '@/sanity/sanity-utils';
+
 export default async function Projects() {
+  const data = await getProjects();
+  console.log(data);
+
+  if (!data)
+    return <div>Sorry, for unknown reason projects could not be loaded.</div>;
+
   return (
     <div className='px-3'>
       {/* <video
@@ -17,150 +25,28 @@ export default async function Projects() {
         <h1 className='text-5xl font-bold mb-2'>PROJECTS</h1>
       </div>
       <div className='flex flex-col  gap-6 py-4'>
-        <Link
-          target='_blank'
-          href='https://www.off---white.com/'
-          className='flex flex-col items-center gap-4 hover:opacity-50 transition-opacity duration-100'
-        >
-          <div className='max-w-80 w-full h-full aspect-video relative'>
-            <Image
-              className='object-cover'
-              loading='lazy'
-              src='/offwhite.png'
-              alt='Picture of the author'
-              fill={true}
-            />
-          </div>
-          <p>Off-White</p>
-        </Link>
-        <Link
-          target='_blank'
-          href='https://modes.com/'
-          className='flex flex-col items-center gap-4 hover:opacity-50 transition-opacity duration-100'
-        >
-          <div className='max-w-80 w-full h-full aspect-video relative'>
-            <Image
-              className='object-cover'
-              loading='lazy'
-              src='/modes.png'
-              alt='Picture of the author'
-              fill={true}
-            />
-          </div>
-          <p>MODES</p>
-        </Link>
-        <Link
-          target='_blank'
-          href='https://karlaotto.com/'
-          className='flex flex-col items-center gap-4 hover:opacity-50 transition-opacity duration-100'
-        >
-          <div className='max-w-80 w-full h-full aspect-video relative'>
-            <Image
-              className='object-cover'
-              loading='lazy'
-              src='/karlaotto.png'
-              alt='Picture of the author'
-              fill={true}
-            />
-          </div>
-          <p>KarlaOtto</p>
-        </Link>
-        <Link
-          target='_blank'
-          href='https://j-la-l.com/'
-          className='flex flex-col items-center gap-4 hover:opacity-50 transition-opacity duration-100'
-        >
-          <div className='max-w-80 w-full h-full aspect-video relative'>
-            <Image
-              className='object-cover'
-              loading='lazy'
-              src='/jlal.png'
-              alt='Picture of the author'
-              fill={true}
-            />
-          </div>
-          <p>_JLAL_</p>
-        </Link>
-        <Link
-          target='_blank'
-          href='https://lerub.com/'
-          className='flex flex-col items-center gap-4 hover:opacity-50 transition-opacity duration-100'
-        >
-          <div className='max-w-80 w-full h-full aspect-video relative'>
-            <Image
-              className='object-cover'
-              loading='lazy'
-              src='/lerub.png'
-              alt='Picture of the author'
-              fill={true}
-            />
-          </div>
-          <p>Lerub</p>
-        </Link>
-        <Link
-          target='_blank'
-          href='https://prestatech.com/'
-          className='flex flex-col items-center gap-4 hover:opacity-50 transition-opacity duration-100'
-        >
-          <div className='max-w-80 w-full h-full aspect-video relative'>
-            <Image
-              className='object-cover'
-              loading='lazy'
-              src='/prestatech.png'
-              alt='Picture of the author'
-              fill={true}
-            />
-          </div>
-          <p>Prestatech</p>
-        </Link>
-        <Link
-          target='_blank'
-          href='https://www.cameranesi-pompili.com'
-          className='flex flex-col items-center gap-4 hover:opacity-50 transition-opacity duration-100'
-        >
-          <div className='max-w-80 w-full h-full aspect-video relative'>
-            <Image
-              className='object-cover'
-              loading='lazy'
-              src='/came.png'
-              alt='Picture of the author'
-              fill={true}
-            />
-          </div>
-          <p>Cameranesi Pompili</p>
-        </Link>
-        <Link
-          target='_blank'
-          href='https://www.gamera.studio'
-          className='flex flex-col items-center gap-4 hover:opacity-50 transition-opacity duration-100'
-        >
-          <div className='max-w-80 w-full h-full aspect-video relative'>
-            <Image
-              className='object-cover'
-              loading='lazy'
-              src='/gamera.png'
-              alt='Picture of the author'
-              fill={true}
-            />
-          </div>
-          <p>Gamera</p>
-        </Link>
-        <Link
-          target='_blank'
-          href='https://www.spotti.com'
-          className='flex flex-col items-center gap-4 hover:opacity-50 transition-opacity duration-100'
-        >
-          <div className='max-w-80 w-full h-full aspect-video relative'>
-            <Image
-              className='object-cover'
-              loading='lazy'
-              src='/spotti.png'
-              alt='Picture of the author'
-              fill={true}
-            />
-          </div>
-          <p>Spotti</p>
-        </Link>
+        {data.map((item, key) => {
+          return (
+            <Link
+              key={key}
+              target='_blank'
+              href={item?.url}
+              className='flex flex-col items-center gap-4 hover:opacity-50 transition-opacity duration-100'
+            >
+              <div className='max-w-80 w-full h-full aspect-video relative'>
+                <Image
+                  className='object-cover'
+                  src={item?.image?.asset?.url}
+                  placeholder='blur'
+                  blurDataURL={item?.image?.asset?.metadata?.lqip}
+                  alt={item?.image?.alt}
+                  fill={true}
+                />
+              </div>
+              <p className='uppercase'>{item?.name}</p>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
