@@ -6,7 +6,7 @@ const config = {
   githubUrl: 'https://github.com/gregrickaby/nextjs-app-router-examples',
   instagram: 'https://instagram.com/ivluence',
   author: 'Adlet Ibraimov',
-  authorUrl: 'https://ivluence.vercel.app',
+  authorUrl: 'https://www.instagram.com/ivluence',
   nav: [
     {
       name: 'ABOUT ME',
