@@ -19,14 +19,18 @@ export async function getAbout(): Promise<About> {
       },
       subtitle,
       description
-    } `
+    } `,
+    {},
+    { cache: 'no-store' }
   );
 }
 export async function getCV(): Promise<CV[]> {
   return client.fetch(
     groq`*[_type=='cv']|order(orderRank){
       ...
-    } `
+    } `,
+    {},
+    { cache: 'no-store' }
   );
 }
 
@@ -43,7 +47,9 @@ export async function getProjects(): Promise<Project[]> {
         }
       },
       url
-    } `
+    } `,
+    {},
+    { cache: 'no-store' }
   );
 }
 
@@ -51,6 +57,8 @@ export async function getContacts(): Promise<Contacts> {
   return client.fetch(
     groq`*[_type=='contacts'][0]{
       contacts
-    } `
+    } `,
+    {},
+    { cache: 'no-store' }
   );
 }
