@@ -1,5 +1,7 @@
 import '../globals.css';
 
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
+
 import Header from '../../components/shared/Header';
 import Footer from '../../components/shared/Footer';
 
@@ -31,6 +33,7 @@ export default async function RootLayout({
         </div>
         <Footer />
       </body>
+      <GoogleAnalytics gaId='G-VG95DB2TKE' />
     </html>
   );
 }
