@@ -39,14 +39,17 @@ body {
 }
 
 h1 {
-  @apply text-5xl;
+  @apply text-5xl md:text-7xl;
 }
 h2 {
   @apply text-2xl;
 }
 h3 {
-  @apply text-lg mb-2 text-secondary uppercase;
+  @apply text-lg md:text-xl mb-2 text-secondary uppercase;
 }
 h4 {
   @apply border-l-4 border-secondary px-2 font-bold uppercase;
+}
+p {
+  @apply md:text-lg;
 }

@@ -24,7 +24,7 @@ export default async function RootLayout({
       <body
         className={clsx(
           ibm_plex_mono.className,
-          'max-w-2xl m-auto text-white flex flex-col justify-between flex-grow h-screen'
+          'max-w-7xl m-auto text-white flex flex-col justify-between flex-grow h-screen'
         )}
       >
         <div>

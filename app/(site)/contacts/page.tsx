@@ -30,7 +30,7 @@ export default async function Contacts() {
   return (
     <div className='px-3 flex flex-col gap-4'>
       <div>
-        <h1 className='text-5xl font-bold mb-2 pb-3'>CONTACTS</h1>
+        <h1 className='font-bold mb-2 pb-3'>CONTACTS</h1>
       </div>
       {data?.contacts.map((item, key) => {
         const IconComponent = item?.socialMedia
