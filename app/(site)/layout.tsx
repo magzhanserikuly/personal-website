@@ -16,8 +16,7 @@ const ibm_plex_mono = IBM_Plex_Mono({
 
 export const metadata = {
   title: 'Adlet Ibraimov',
-  description: 'IVLUENCE Personal website',
-  other: { name: "google-site-verification", content: "4zB724bVA2kxK4cJJaVLXDHQphmooTwqPxKlaDfZ-nU" }
+  description: 'Adlet Ibraimov is a Web Developer & Content Creator based in Milan, Italy',
 };
 
 export default async function RootLayout({
