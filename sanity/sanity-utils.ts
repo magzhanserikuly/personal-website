@@ -10,6 +10,7 @@ export async function getAbout(): Promise<About> {
     groq`*[_type == "about"][0]{
       name,
       image{
+        alt,
         asset->{
           url,
           metadata{
