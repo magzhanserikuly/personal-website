@@ -42,7 +42,6 @@ export default async function Home() {
           placeholder='blur'
           blurDataURL={data.image?.asset?.metadata?.lqip}
         />
-
       </div>
     </div>
   );

@@ -1,9 +1,5 @@
 import '../globals.css';
 
-export const metadata = {
-  title: 'Adlet Ibraimov',
-  description: 'IVLUENCE Personal website',
-};
 
 export default function RootLayout({
   children,

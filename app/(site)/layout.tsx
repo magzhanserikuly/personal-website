@@ -13,6 +13,13 @@ const ibm_plex_mono = IBM_Plex_Mono({
   weight: ['400', '700'],
   subsets: ['latin', 'cyrillic'],
 });
+
+export const metadata = {
+  title: 'Adlet Ibraimov',
+  description: 'IVLUENCE Personal website',
+  other: { name: "google-site-verification", content: "4zB724bVA2kxK4cJJaVLXDHQphmooTwqPxKlaDfZ-nU" }
+};
+
 export default async function RootLayout({
   children,
 }: {
