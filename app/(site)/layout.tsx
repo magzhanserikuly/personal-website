@@ -15,7 +15,7 @@ const ibm_plex_mono = IBM_Plex_Mono({
 });
 
 export const metadata = {
-  title: 'Adlet Ibraimov',
+  title: 'ADLET IBRAIMOV',
   description: 'Adlet Ibraimov is a Web Developer & Content Creator based in Milan, Italy',
 };
 
