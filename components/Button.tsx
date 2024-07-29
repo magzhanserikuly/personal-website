@@ -14,7 +14,7 @@ export default function Button(props: PropsType) {
     <Link
       target='_blank'
       href={props.value}
-      className='border rounded-md px-3 py-3 hover:opacity-50 transition-opacity duration-100 flex justify-between '
+      className='border rounded-md px-3 py-3 hover:bg-secondary hover:text-white transition-all duration-100 flex justify-between '
     >
       <div className='flex gap-2'>
         <props.icon />
