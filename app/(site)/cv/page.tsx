@@ -1,6 +1,8 @@
 import React from 'react';
 import { getCV } from '@/sanity/sanity-utils';
 import { PortableText } from '@portabletext/react';
+import Button from '@/components/Button';
+import DownloadIcon from '@mui/icons-material/Download';
 
 export default async function CV() {
   const data = await getCV();
@@ -9,6 +11,9 @@ export default async function CV() {
 
   return (
     <div className='px-3 overflow-y-auto'>
+      <div className='mb-10 animate-pulse '>
+        <Button icon={DownloadIcon} text='DOWNLOAD CV' value='https://storage.rxresu.me/clz6sa3fh5c10vrn3rlvbhbez/resumes/Frontend.pdf' />
+      </div>
       {data.map((item, key) => {
         return (
           <div key={key}>
