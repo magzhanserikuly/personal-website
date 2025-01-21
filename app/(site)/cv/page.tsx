@@ -12,11 +12,11 @@ export default async function CV() {
 
   return (
     <div className='px-3 overflow-y-auto'>
-      <div className='my-5 animate-bounce delay-2 translate-y-[-25%]'>
-        <Button icon={VisibilityIcon} text='VIEW CV' value='https://rxresu.me/ibrvimv/frontend' />
-      </div>
-      <div className='mb-10 animate-bounce '>
-        <Button icon={DownloadIcon} text='DOWNLOAD CV' value='https://storage.rxresu.me/clz6sa3fh5c10vrn3rlvbhbez/resumes/Frontend.pdf' />
+      {/* <div className='my-5 animate-bounce delay-2 translate-y-[-25%]'>
+        <Button icon={VisibilityIcon} text='VIEW CV' value='https://drive.google.com/file/d/1AZ5M1GGgkHbp2nW2T-VDkuPtij3yvTsM/view?usp=sharing' />
+      </div> */}
+      <div className='my-5 mb-10'>
+        <Button icon={DownloadIcon} text='DOWNLOAD CV' value='https://drive.google.com/file/d/1AZ5M1GGgkHbp2nW2T-VDkuPtij3yvTsM/view?usp=sharing' />
       </div>
       {data.map((item, key) => {
         return (
