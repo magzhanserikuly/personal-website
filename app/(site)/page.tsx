@@ -39,6 +39,7 @@ export default async function Home() {
           src={data.image?.asset?.url}
           alt={data.image?.alt}
           fill={true}
+          loading='eager'
           placeholder='blur'
           blurDataURL={data.image?.asset?.metadata?.lqip}
         />
