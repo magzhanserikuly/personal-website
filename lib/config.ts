@@ -2,11 +2,11 @@ const config = {
   siteName: 'ADLET IBRAIMOV',
   siteDescription:
     'Personal website of Adlet Ibraimov, Content creator, Frontend developer and music producer',
-  siteUrl: 'https://ivluence.vercel.app',
-  githubUrl: 'https://github.com/gregrickaby/nextjs-app-router-examples',
-  instagram: 'https://instagram.com/ivluence',
+  siteUrl: 'https://adlet-ibraimov.vercel.app',
+  githubUrl: 'https://github.com/ibrvimv',
+  instagram: 'https://instagram.com/iv.branding',
   author: 'Adlet Ibraimov',
-  authorUrl: 'https://www.instagram.com/ivluence',
+  authorUrl: 'https://www.instagram.com/iv.branding',
   nav: [
     {
       name: 'ABOUT ME',
