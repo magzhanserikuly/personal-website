@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { getAbout } from '@/sanity/sanity-utils';
 import { PortableText } from '@portabletext/react';
+import { urlForImage } from '@/sanity/lib/image';
 
 export default async function Home() {
   const data = await getAbout();
@@ -36,7 +37,7 @@ export default async function Home() {
         ></div>
         <Image
           className='object-cover'
-          src={data.image?.asset?.url}
+          src={urlForImage(data.image)}
           alt={data.image?.alt}
           fill={true}
           loading='eager'
